@@ -1,4 +1,4 @@
-Workout Analyzer
+# Workout Analyzer
 
 Java • Spring Boot • H2 • REST API
 
