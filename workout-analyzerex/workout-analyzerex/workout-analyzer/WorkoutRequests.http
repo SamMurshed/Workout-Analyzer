@@ -1,0 +1,37 @@
+POST http://localhost:8080/api/workouts
+Content-Type: application/json
+
+{
+  "exercise": "Squat",
+  "sets": 4,
+  "reps": 10,
+  "weight": 135,
+  "date": "2025-07-27"
+}
+
+### Add Push-Up
+POST http://localhost:8080/api/workouts
+Content-Type: application/json
+
+{
+  "exercise": "Push-Up",
+  "sets": 3,
+  "reps": 15,     
+  "weight": 0,
+  "date": "2025-07-26"
+}
+{
+  "exercise": "Situp",
+  "sets": 3,
+  "reps": 15,     
+  "weight": 0,
+  "date": "2025-07-26"
+}
+
+### Get volumes for each workout
+GET http://localhost:8080/api/workouts/analysis/volume
+
+### 26th only
+GET http://localhost:8080/api/workouts/analysis/summary?end=2025-07-26
+### Filtered summary — only July 27–28, 2025
+GET http://localhost:8080/api/workouts/analysis/summary?start=2025-07-27&end=2025-07-28
